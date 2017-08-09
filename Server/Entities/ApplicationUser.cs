@@ -2,6 +2,7 @@ using System;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace AspNetCoreSpa.Server.Entities
 {
@@ -23,6 +24,11 @@ namespace AspNetCoreSpa.Server.Entities
                 return this.FirstName + " " + this.LastName;
             }
         }
+
+        /// <summary>
+        /// 勤務記録
+        /// </summary>
+        public ICollection<WorkingRecord> WorkingRecords { get; set; }
 
     }
 }
